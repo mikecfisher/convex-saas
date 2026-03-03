@@ -16,7 +16,8 @@ export default defineConfig({
     alias: {
       "~": __dirname,
       "@": path.resolve(__dirname, "./apps/web/src"),
-      "@cvx": path.resolve(__dirname, "./convex"),
+      "@cvx": path.resolve(__dirname, "./packages/backend/convex"),
+      "@backend": path.resolve(__dirname, "./packages/backend"),
     },
   },
 });

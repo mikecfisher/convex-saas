@@ -4,4 +4,4 @@
   status = 200
 
 [context.production]
-  command = "bunx convex deploy --cmd 'bun run build'"
+  command = "bun run --cwd packages/backend deploy"

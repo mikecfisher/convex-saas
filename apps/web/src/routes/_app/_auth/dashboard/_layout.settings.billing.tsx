@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Switch } from "@/ui/switch";
 import { Button } from "@/ui/button";
 import { createFileRoute } from "@tanstack/react-router";
-import { api } from "~/convex/_generated/api";
+import { api } from "@cvx/_generated/api";
 import { convexQuery, useConvexAction } from "@convex-dev/react-query";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { getLocaleCurrency } from "@/utils/misc";

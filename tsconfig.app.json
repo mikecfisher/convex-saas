@@ -27,16 +27,17 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./apps/web/src/*"],
-      "@cvx/*": ["./convex/*"],
+      "@cvx/*": ["./packages/backend/convex/*"],
+      "@backend/*": ["./packages/backend/*"],
       "~/*": ["./*"]
     }
   },
   "include": [
     "apps/web/src",
-    "types.ts",
+    "packages/backend/types.ts",
     "constants",
-    "convex",
+    "packages/backend/convex",
     "site.config.ts",
-    "errors.ts"
+    "packages/backend/errors.ts"
   ]
 }

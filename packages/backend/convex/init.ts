@@ -1,5 +1,5 @@
 import { asyncMap } from "convex-helpers";
-import { ERRORS } from "~/errors";
+import { ERRORS } from "@backend/errors";
 import { internalAction, internalMutation } from "@cvx/_generated/server";
 import schema, {
   CURRENCIES,

@@ -5,7 +5,7 @@ import { useDoubleCheck } from "@/ui/use-double-check";
 import { Input } from "@/ui/input";
 import { Button } from "@/ui/button";
 import { convexQuery, useConvexMutation } from "@convex-dev/react-query";
-import { api } from "~/convex/_generated/api";
+import { api } from "@cvx/_generated/api";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useRef } from "react";
 import { useForm } from "@tanstack/react-form";

@@ -13,11 +13,11 @@
     "start": "bun run dev",
     "dev": "concurrently \"bun run dev:frontend\" \"bun run dev:backend\"",
     "dev:frontend": "vite",
-    "dev:backend": "convex dev",
-    "predev": "convex dev --run init --until-success",
+    "dev:backend": "bun run --cwd packages/backend dev",
+    "predev": "bun run --cwd packages/backend setup",
     "build": "tsc -b && vite build",
-    "lint": "eslint . --ignore-pattern convex/_generated --ignore-pattern '**/dist/**' --ignore-pattern '**/dist-ssr/**' --report-unused-disable-directives --max-warnings 0",
-    "typecheck": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json && tsc -p convex/tsconfig.json",
+    "lint": "eslint . --ignore-pattern packages/backend/convex/_generated --ignore-pattern '**/dist/**' --ignore-pattern '**/dist-ssr/**' --report-unused-disable-directives --max-warnings 0",
+    "typecheck": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json && bun run --cwd packages/backend typecheck",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -24,7 +24,7 @@ import { Link, useMatchRoute, useNavigate } from "@tanstack/react-router";
 import { Route as DashboardRoute } from "@/routes/_app/_auth/dashboard/_layout.index";
 import { Route as SettingsRoute } from "@/routes/_app/_auth/dashboard/_layout.settings.index";
 import { Route as BillingSettingsRoute } from "@/routes/_app/_auth/dashboard/_layout.settings.billing";
-import { User } from "~/types";
+import { User } from "@backend/types";
 import { PLANS } from "@cvx/schema";
 
 export function Navigation({ user }: { user: User }) {

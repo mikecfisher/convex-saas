@@ -50,10 +50,10 @@ Features provided out of the box:
 bun install
 
 # set up a new Convex project
-bunx convex dev --configure=new --once
+(cd packages/backend && bunx convex dev --configure=new --once)
 
 # set up Convex Auth
-bunx @convex-dev/auth
+(cd packages/backend && bunx @convex-dev/auth)
 ```
 
 # Environment
@@ -65,7 +65,7 @@ bunx @convex-dev/auth
 1. Get your API Key by visiting the [Resend Dashboard](https://resend.com/api-keys).
 2. Add to your Convex dev deployment:
    ```sh
-   bunx convex env set AUTH_RESEND_KEY re_...
+   (cd packages/backend && bunx convex env set AUTH_RESEND_KEY re_...)
    ```
 
 ## Stripe
@@ -77,7 +77,7 @@ In order to use Stripe Subscriptions and seed our database, we'll require to get
 3. Visit the [API Keys](https://dashboard.stripe.com/test/apikeys) section and copy `Secret` key.
 4. Add to your Convex dev deployment:
    ```sh
-   bunx convex env set STRIPE_SECRET_KEY sk_test_...
+   (cd packages/backend && bunx convex env set STRIPE_SECRET_KEY sk_test_...)
    ```
 
 ## Stripe Webhook
@@ -88,7 +88,7 @@ Stripe sends webhook events when your users update or delete their subscriptions
 2. Run the local webhook server:
 
 ```sh
-stripe listen --forward-to $(bunx convex env get CONVEX_SITE_URL)/stripe/webhook
+stripe listen --forward-to $(cd packages/backend && bunx convex env get CONVEX_SITE_URL)/stripe/webhook
 ```
 
 4. After running the first time, you may be prompted to authenticate. If so, after
@@ -96,7 +96,7 @@ stripe listen --forward-to $(bunx convex env get CONVEX_SITE_URL)/stripe/webhook
 5. The CLI will print a webhook secret key and begin listening for events.
 6. Add the webhook secret key to your Convex dev deployment:
    ```sh
-   bunx convex env set STRIPE_WEBHOOK_SECRET whsec_...
+   (cd packages/backend && bunx convex env set STRIPE_WEBHOOK_SECRET whsec_...)
    ```
 
 > [!IMPORTANT]

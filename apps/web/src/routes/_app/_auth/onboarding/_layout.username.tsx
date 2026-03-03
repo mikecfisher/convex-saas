@@ -6,7 +6,7 @@ import { useForm } from "@tanstack/react-form";
 import { zodValidator } from "@tanstack/zod-form-adapter";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { convexQuery, useConvexMutation } from "@convex-dev/react-query";
-import { api } from "~/convex/_generated/api";
+import { api } from "@cvx/_generated/api";
 import { Route as DashboardRoute } from "@/routes/_app/_auth/dashboard/_layout.index";
 import * as validators from "@/utils/validators";
 import { useEffect, useState } from "react";

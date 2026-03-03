@@ -14,7 +14,7 @@ This document tracks the staged migration to a Turborepo monorepo.
 1. Baseline and freeze checkpoint.
 2. Bootstrap workspace + Turborepo scaffolding.
 3. Move current app to `apps/web` without behavior changes.
-4. Move Convex backend to its own app boundary.
+4. Move Convex backend to `packages/backend/convex`.
 5. Extract shared packages.
 6. Add mobile app.
 7. Add/expand tests, then enforce in hooks.

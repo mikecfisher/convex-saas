@@ -13,8 +13,8 @@
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "~/*": ["../*"],
-      "@cvx/*": ["./*"]
+      "@cvx/*": ["./*"],
+      "@backend/*": ["../*"]
     },
 
     /* These compiler options are required by Convex */
