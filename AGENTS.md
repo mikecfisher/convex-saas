@@ -23,7 +23,7 @@
 ## Coding Style & Naming Conventions
 - Language: TypeScript (strict mode enabled across app and Convex).
 - Formatting: Prettier defaults (`.prettierrc` is `{}`), 2-space indentation.
-- Linting: ESLint + `typescript-eslint`; keep warnings/errors clean before opening PRs.
+- Linting: Oxlint with nested monorepo configs (`.oxlintrc.json` at root + package overrides); keep warnings/errors clean before opening PRs.
 - Naming:
   - React components: `PascalCase`.
   - Hooks: `useSomething`.
