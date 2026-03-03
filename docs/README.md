@@ -112,6 +112,14 @@ bun start
 
 You should be able to access your app at [http://localhost:5173](http://localhost:5173) 🎉
 
+# CI
+
+Use Turbo affected mode in CI to run checks only for changed packages:
+
+```sh
+bunx turbo run lint typecheck build --affected
+```
+
 # Deployment
 
 ## Stripe Webhook - Production

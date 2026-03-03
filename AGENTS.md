@@ -6,17 +6,19 @@
 - `apps/web/src/ui/` holds reusable UI primitives; `apps/web/src/utils/` contains shared helpers/validators.
 - `packages/backend/convex/` contains backend functions, schema, auth, Stripe/email logic, and Convex config.
 - `packages/backend/convex/_generated/` is generated code; do not edit manually.
+- `apps/web/package.json` and `packages/backend/package.json` define package-local scripts used by Turbo.
 - `apps/web/public/` stores static assets and i18n files (`apps/web/public/locales/*`).
 - `docs/guide/` contains setup and deployment documentation.
 
 ## Build, Test, and Development Commands
 - `bun install`: install dependencies.
-- `bun start` (alias for `bun run dev`): run frontend (`vite`) and backend (`bun run --cwd packages/backend dev`) together.
-- `bun run predev`: initialize Convex data via `bun run --cwd packages/backend setup`.
-- `bun run build`: TypeScript project build + production Vite bundle.
-- `bun run lint`: ESLint checks (Convex generated files ignored).
-- `bun run typecheck`: strict type checks for app, node config, and Convex.
-- `bun run preview`: serve the production bundle locally.
+- `bun start` / `bun run dev`: run package dev tasks through Turbo.
+- `bun run predev`: initialize Convex data (`turbo run setup --filter=@repo/backend`).
+- `bun run build`: run package builds via Turbo.
+- `bun run lint`: run package lint checks via Turbo.
+- `bun run typecheck`: run package type checks via Turbo.
+- `bun run preview`: preview the web app via Turbo filter.
+- `turbo run lint typecheck build --affected`: CI command for changed packages only.
 
 ## Coding Style & Naming Conventions
 - Language: TypeScript (strict mode enabled across app and Convex).

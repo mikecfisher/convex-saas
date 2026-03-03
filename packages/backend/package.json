@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "bunx convex dev",
     "setup": "bunx convex dev --run init --until-success",
+    "build": "bun run typecheck",
+    "lint": "eslint convex --ignore-pattern convex/_generated --report-unused-disable-directives --max-warnings 0",
     "typecheck": "tsc -p convex/tsconfig.json",
     "deploy": "bunx convex deploy --cmd 'bun run --cwd ../.. build'"
   }
