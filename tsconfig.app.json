@@ -26,13 +26,13 @@
     /* Alias */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./apps/web/src/*"],
       "@cvx/*": ["./convex/*"],
       "~/*": ["./*"]
     }
   },
   "include": [
-    "src",
+    "apps/web/src",
     "types.ts",
     "constants",
     "convex",

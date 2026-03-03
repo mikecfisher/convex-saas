@@ -1,12 +1,12 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- `src/` contains the frontend app (React + Vite + TanStack Router).
-- `src/routes/` is file-based routing; route files follow TanStack patterns like `_layout.*.tsx`.
-- `src/ui/` holds reusable UI primitives; `src/utils/` contains shared helpers/validators.
+- `apps/web/src/` contains the frontend app (React + Vite + TanStack Router).
+- `apps/web/src/routes/` is file-based routing; route files follow TanStack patterns like `_layout.*.tsx`.
+- `apps/web/src/ui/` holds reusable UI primitives; `apps/web/src/utils/` contains shared helpers/validators.
 - `convex/` contains backend functions, schema, auth, Stripe/email logic, and Convex config.
 - `convex/_generated/` is generated code; do not edit manually.
-- `public/` stores static assets and i18n files (`public/locales/*`).
+- `apps/web/public/` stores static assets and i18n files (`apps/web/public/locales/*`).
 - `docs/guide/` contains setup and deployment documentation.
 
 ## Build, Test, and Development Commands
@@ -26,7 +26,7 @@
   - React components: `PascalCase`.
   - Hooks: `useSomething`.
   - Utility files/functions: concise `camelCase` names.
-  - Route files: follow existing route naming conventions in `src/routes/`.
+  - Route files: follow existing route naming conventions in `apps/web/src/routes/`.
 - Use path aliases where appropriate: `@/*` (src), `@cvx/*` (convex), `~/*` (repo root).
 
 ## Testing Guidelines
